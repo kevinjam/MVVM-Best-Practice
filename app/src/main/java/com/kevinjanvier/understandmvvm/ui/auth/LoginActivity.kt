@@ -12,7 +12,6 @@ import com.kevinjanvier.understandmvvm.R
 import com.kevinjanvier.understandmvvm.databinding.ActivityLoginBinding
 import com.kevinjanvier.understandmvvm.util.toast
 
-import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), AuthListener {
 
@@ -20,7 +19,7 @@ class LoginActivity : AppCompatActivity(), AuthListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        // setContentView(R.layout.activity_login)
-        val binding:ActivityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
+        val binding: ActivityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
 
         val viewModel = ViewModelProviders.of(this).get(AuthViewModel::class.java)
 
