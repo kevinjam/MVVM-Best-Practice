@@ -20,5 +20,15 @@ class UserRepository(
 
     suspend fun saveUser(user:User) = db.getUserDao().upsert(user)
 
+    suspend fun userSignup(
+        name:String,
+        email:String,
+        password: String
+    ):AuthResponse{
+        return  apiRequest { api.userSignup(name, email, password) }
+    }
+
     fun getUser() = db.getUserDao().getuser()
+
+
 }
